@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaWka - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="../Аннотация 2023-12-05 184926.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5efe1;
+            margin: 0;
+            padding: 0;
+            color: #252525;
+        }
+        header {
+            width: 100%;
+            background: #3B4E3E;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        header h1 {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        header h1 i {
+            margin-right: 0.5rem;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        header nav ul li {
+            margin: 0 1rem;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        header nav ul li a.get-in-touch {
+            background: #ffb703;
+            color: #2d2d2d;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        .portfolio {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .portfolio h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-container img {
+            width: 300px;
+            height: auto;
+            border-radius: 0px;
+        }
+        .social-media {
+            margin-top: 20px;
+        }
+        .social-media p {
+            margin: 5px 0;
+            color: #d4af37;
+            font-size: 18px;
+        }
+        .main-container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 1000px;
+            background-color: #b85454;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: 0px auto;
+        }
+        .left {
+            flex: 2;
+            padding: 60px;
+            background-color: #dcd7ce;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .left h1 {
+            font-size: 48px;
+            margin: 0;
+            font-weight: bold;
+        }
+        .left p {
+            font-size: 18px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        .left .linkedin {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .left .linkedin img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .right {
+            flex: 1;
+            position: relative;
+        }
+        .right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .right .info, .right .contact {
+            position: absolute;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 18px;
+        }
+        .right .info {
+            bottom: 20px;
+            left: 20px;
+            background-color: #ffb142;
+        }
+        .right .contact {
+            bottom: 60px;
+            left: 20px;
+        }
+        footer {
+            background: #3B4E3E;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+        .resume-container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .left-column {
+            width: 100%;
+            background-color: #3B4433;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .right-column {
+            width: 100%;
+            background-color: #2F4858;
+            color: white;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        h2, h3 {
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .tag {
+            display: inline-block;
+            color: #F0C808;
+            padding: 0;
+            margin: 0;
+            border-radius: 0;
+        }
+        .section {
+            color: #e7dede;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .hobby {
+            display: inline-block;
+            background-color: white;
+            color: #2F4858;
+            padding: 5px 10px;
+            margin: 5px 5px 5px 0;
+            border-radius: 5px;
+        }
+        .skill {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div>
+                <h1><i class="fa-solid fa-star" style="color: #F46638"></i> WaWka</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#skill">Resume</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#" class="get-in-touch">Get in touch!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="portfolio" style="background-color: #3B4E3E;">
+        <h1>PORTFOLIO</h1>
+        <div  class="image-container">
+            <img src="g.webp" alt="Portfolio Image">
+        </div>
+        <div id="about" class="social-media">
+            <p>TG: @wawka_009</p>
+        </div>
+    </div>
+    <div>
+    <div class="main-container" style="background-color: #3B4433;">
+        <div class="left">
+            <h1>Hello, I'm WaWka!</h1>
+            <p>I live in the city of Nukus, Najmatdinova Oralxan, I study in the 9th grade in the 24th school of 2009, I am 15 years old now. I am currently a python developer and I really like this programming language. I will be a strong developer in the future and I will not back down from this path. I have studied python basics and python development courses at technopos it academy and am currently working on my.</p>
+            <div class="linkedin">
+                <a href="https://www.instagram.com/orkashka_/">
+                    <img src="Аннотация 2023-12-05 184926.png" alt="Instagram Icon">instagram.com/orkashka_
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <img src="../1002516771-photo-u2.jfif" alt="WaWka's Image">
+            <div class="info">26th August 2009</div>
+            <div class="contact">Wawka</div>
+        </div>
+    </div>
+</div>
+
+    <div id="skill" class="resume-container">
+        <div class="right-column">
+            <div class="section">
+                <h2>Technical Skills</h2>
+                <div class="skills" style="display: flex; flex-wrap: wrap;">
+                    <div class="skill"><img src="../Python-logo-notext.svg.png" alt="icon" class="icon">Python</div>
+                    <div class="skill"><img src="../6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon.webp" alt="icon" class="icon">Html</div>
+                    <div class="skill"><img src="../css.png" alt="icon" class="icon">CSS</div>
+                    <div class="skill"><img src="../bootsrap.webp" alt="icon" class="icon">Bootstrap</div>
+                    <div class="skill"><img src="../django-1-256.png" alt="icon" class="icon">Django</div>
+                    <div class="skill"><img src="../restframeework.png" alt="icon" class="icon">DRF</div>
+                    <div class="skill"><img src="../sql.png" alt="icon" class="icon">SQL</div>
+                    <div class="skill"><img src="../tailwind-css-icon-512x307-1v56l8ed.png" alt="icon" class="icon">Tailwind</div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Languages</h2>
+                <div class="languages" style="font-family: 'Titillium Web', sans-serif;">
+                    <div class="tag">English: Intermediate</div>
+                    <div class="tag">Russian: Confident</div>
+                    <div class="tag">Uzbek: Advanced</div>
+                    <div class="tag">Karakalpak: Advanced</div>
+                    <div class="tag">Kazak: Advanced</div>
+                </div>
+            </div>
+            <div class="section">
+                <h2>Hobbies & Interests</h2>
+                <div class="hobbies">
+                    <div class="hobby">Basketball</div>
+                    <div class="hobby">Photography</div>
+                    <div class="hobby">Music</div>
+                    <div class="hobby">Traveling</div>
+                    <div class="hobby">Coding</div>
+                </div>
+            </div>
+        </div>
+        <div class="left-column">
+            <div class="section">
+                <h2 style="font-family:'Baskervville SC', serif; color: #FDAB1B;">Education</h2>
+                <ul>
+                    <li><i class="fa-solid fa-star-half-stroke" style="color: #EA6544;"></i> 21-22 Python Basic</li>
+                    <li><i class="fa-solid fa-star-half-stroke" style="color: #EA6544;"></i> 23-24 Python Developer</li>
+                    <li><i class="fa-solid fa-star-half-stroke" style="color: #EA6544;"></i> 24-25 Learning...</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2 style="color: #EA6544; font-family:'Baskervville SC', serif">Experience</h2>
+                <ul>
+                    <li><i class="fa-regular fa-star" style="color:  #FDAB1B;"></i> 1. Python</li>
+                    <li><i class="fa-regular fa-star" style="color:  #FDAB1B;"></i> 2. Frontend</li>
+                    <li><i class="fa-regular fa-star" style="color:  #FDAB1B;"></i> 3. Database</li>
+                </ul>
+            </div>
+            <div id="work" class="section">
+                <h2 style="color: #F0C808; font-family:'Baskervville SC', serif;">My Works</h2>
+                <ul>
+                    <div class="skill">1. <a href="https://github.com/oralxan/hotel-exam.git"><img src="../github-512.webp" alt="icon" class="icon"></a></div> 
+                    <div class="skill">2. <a href="https://github.com/oralxan/pizzarestourant.git"><img src="../github-512.webp" alt="icon" class="icon"></a></div> 
+                    <div class="skill">3. <a href="https://github.com/oralxan/News.git"><img src="../github-512.webp" alt="icon" class="icon"></a></div> 
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer>
+        <p>&copy; 2024 &#x2764;WaWka&#x2764;. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
